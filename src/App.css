@@ -1,38 +1,295 @@
-.App {
-  text-align: center;
+/* src/App.css */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fed7aa 0%, #fef2f2 50%, #fef3c7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+.background-decorations {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.circle {
+  position: absolute;
+  border: 4px solid;
+  border-radius: 50%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.circle-1 {
+  top: 5rem;
+  left: 5rem;
+  width: 8rem;
+  height: 8rem;
+  border-color: #fb923c;
+}
+
+.circle-2 {
+  top: 10rem;
+  right: 8rem;
+  width: 6rem;
+  height: 6rem;
+  border-color: #f87171;
+  animation-delay: 1s;
+}
+
+.circle-3 {
+  bottom: 8rem;
+  left: 10rem;
+  width: 7rem;
+  height: 7rem;
+  border-color: #fbbf24;
+  animation-delay: 2s;
+}
+
+.circle-4 {
+  bottom: 5rem;
+  right: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-color: #f97316;
+  animation-delay: 0.5s;
+}
+
+.content {
+  max-width: 48rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.title-section {
+  margin-bottom: 2rem;
+}
+
+.nepali-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ea580c, #dc2626, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.english-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.subtitle-section {
+  margin-bottom: 2rem;
+}
+
+.main-subtitle {
+  font-size: 1.5rem;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.rotating-text {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heritage-text {
+  font-size: 1.125rem;
+  color: #4b5563;
+  font-style: italic;
+  transition: all 0.5s ease-in-out;
+  margin: 0;
+}
+
+.progress-section {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.75rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #f97316, #dc2626, #eab308);
+  border-radius: 9999px;
+  transition: width 0.3s ease-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #4b5563;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+.dot-1 {
+  background-color: #f97316;
+}
+
+.dot-2 {
+  background-color: #dc2626;
+  animation-delay: 0.1s;
+}
+
+.dot-3 {
+  background-color: #eab308;
+  animation-delay: 0.2s;
+}
+
+.footer-section {
+  border-top: 4px solid #fb923c;
+  padding-top: 1.5rem;
+}
+
+.nepali-quote {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.quote-translation {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.floating-particles {
+  position: absolute;
+  inset: 0;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.particle-1 {
+  top: 25%;
+  left: 25%;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fb923c;
+  opacity: 0.6;
+}
+
+.particle-2 {
+  top: 75%;
+  right: 33.333333%;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #f87171;
+  opacity: 0.4;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  bottom: 25%;
+  left: 66.666667%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #fbbf24;
+  opacity: 0.3;
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nepali-title {
+    font-size: 3rem;
+  }
+
+  .english-title {
+    font-size: 2rem;
+  }
+
+  .main-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .circle {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nepali-title {
+    font-size: 2.5rem;
+  }
+
+  .english-title {
+    font-size: 1.5rem;
+  }
+
+  .main-subtitle {
+    font-size: 1rem;
   }
 }
